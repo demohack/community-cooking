@@ -26,8 +26,7 @@ def config_app(app):
     app.config['TESTING'] = True
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
-from os import getpid
-pid = str(getpid())
+pid = str(os.getpid())
 print(f'Creating PID file: {pid} => /tmp/flaskapp.pid')
 fh=open("/tmp/flaskapp.pid", "w")
 fh.write(pid)
