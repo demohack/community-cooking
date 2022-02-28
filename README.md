@@ -1,1 +1,1 @@
-# community-cooking
+# cooking together
