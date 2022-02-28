@@ -1,3 +1,42 @@
+.git
+.gitignore
+
+other/
+
+#
+# ignore .conf files that possibly contains passwords
+#
+**/conf
+**/.conf
+**/*.conf
+
+#
+# ignore .env files that possibly contains passwords
+#
+**/env/
+**/venv/
+**/.env
+**/*.env
+
+**/*.pyc
+**/__pycache__/
+
+**/instance/
+
+**/.pytest_cache/
+**/.coverage
+**/htmlcov/
+
+**/dist/
+**/build/
+**/*.egg-info/
+
+**/node_modules/
+
+**/.DS_Store
+**/.vscode
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
