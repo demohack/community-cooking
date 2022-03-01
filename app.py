@@ -1,3 +1,5 @@
+print("log: app.py : begin")
+
 import os
 
 from flask import Flask, render_template, request, flash, redirect, session, g
@@ -19,16 +21,12 @@ toolbar = DebugToolbarExtension(app)
 ##############################################################################
 # User signup/login/logout
 
-print("log: app.py")
 
 @app.route('/')
 def homepage():
-    """Show homepage:
+    print("log: app.py - homepage() : begin")
 
-    - anon users: no messages
-    - logged in: 100 most recent messages of followed_users
-    """
-
-    print("log: app.py - homepage()")
+    print("log: app.py - homepage() : end")
     return render_template('home.html')
 
+print("log: app.py : end")
