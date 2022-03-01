@@ -4,12 +4,9 @@ print("log: seed.py : begin")
 from flask import Flask
 app = Flask(__name__)
 
+from models import db, connect_db, User, Session
 from config import config_app
 config_app(app)
-
-from csv import DictReader
-
-from models import db, connect_db, User, Session
 connect_db(app)
 
 db.drop_all()
