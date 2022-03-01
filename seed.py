@@ -1,4 +1,5 @@
 """Seed database with sample data from CSV Files."""
+print("log: seed.py : begin")
 
 from flask import Flask
 app = Flask(__name__)
@@ -8,19 +9,18 @@ config_app(app)
 
 from csv import DictReader
 
-from models import db, connect_db, User, Message, Follows
+from models import db, connect_db, User, Session
 connect_db(app)
 
 db.drop_all()
 db.create_all()
 
-with open('generator/users.csv') as users:
-    db.session.bulk_insert_mappings(User, DictReader(users))
+t = u1 = User(username="yu", email="yu@pfix.org", first_name="Yu", last_name="Te", created_time="10/31/2021 08:00:12"); db.session.add(t); db.session.commit()
+t = u2 = User(username="test2", email="test2@ptest.org", first_name="Test2", last_name="Last2", created_time="10/31/2021 08:00:12"); db.session.add(t); db.session.commit()
+t = u3 = User(username="test3", email="test3@ptest.org", first_name="Test3", last_name="Last3", created_time="10/31/2021 08:00:12"); db.session.add(t); db.session.commit()
 
-with open('generator/messages.csv') as messages:
-    db.session.bulk_insert_mappings(Message, DictReader(messages))
+t = s1 = Session(session_hash="hash1", user_id=u1.id, client_ip="192.168.0.1", host_ip="192.168.0.2", requested_url="http://hello/test", start_time="10/31/2021 08:00:12"); db.session.add(t); db.session.commit()
+t = s2 = Session(session_hash="hash2", user_id=u2.id, client_ip="192.168.0.3", host_ip="192.168.0.2", requested_url="http://hello/test", start_time="10/31/2021 08:00:12"); db.session.add(t); db.session.commit()
+t = s3 = Session(session_hash="hash3", user_id=u3.id, client_ip="192.168.0.4", host_ip="192.168.0.2", requested_url="http://hello/test", start_time="10/31/2021 08:00:12"); db.session.add(t); db.session.commit()
 
-with open('generator/follows.csv') as follows:
-    db.session.bulk_insert_mappings(Follows, DictReader(follows))
-
-db.session.commit()
+print("log: seed.py : end")
