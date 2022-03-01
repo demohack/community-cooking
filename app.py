@@ -8,6 +8,7 @@ def create_app(test_config=None):
     if 'ON_HEROKU' in os.environ:
         DATABASE_URI = os.environ.get('DATABASE_URL')
         SECRET_KEY = os.environ.get('SECRET_KEY')
+        
     else:
         from dotenv import dotenv_values
         settings = dotenv_values("/Users/yu/sb/conf/.env")
@@ -28,14 +29,12 @@ def create_app(test_config=None):
     from flask import Flask, redirect
     app = Flask(__name__, instance_relative_config=True)
 
-    app.config.from_mapping (
-        SECRET_KEY=SECRET_KEY,
-        SQLALCHEMY_DATABASE_URI=DATABASE_URI,
-        SQLALCHEMY_TRACK_MODIFICATIONS=False,
-        SQLALCHEMY_ECHO=True,
-        TESTING=True,
-        DEBUG_TB_INTERCEPT_REDIRECTS=False,
-    )
+    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['SQLALCHEMY_ECHO'] = False
+    app.config['SECRET_KEY'] = SECRET_KEY
+    app.config['TESTING'] = True
+    app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
     from models import connect_db
     connect_db(app)
