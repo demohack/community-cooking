@@ -1,6 +1,8 @@
 import os
 from dotenv import dotenv_values
 
+print "log: config.py"
+
 def config_app(app):
     if 'ON_HEROKU' in os.environ:
         DATABASE_URI = os.environ.get('DATABASE_URI')
@@ -26,3 +28,5 @@ def config_app(app):
     app.config['SECRET_KEY'] = SECRET_KEY
     app.config['TESTING'] = True
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+
+    print "log: config.py - config_app()"

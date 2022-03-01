@@ -19,6 +19,7 @@ toolbar = DebugToolbarExtension(app)
 ##############################################################################
 # User signup/login/logout
 
+print "log: app.py"
 
 @app.route('/')
 def homepage():
@@ -28,5 +29,6 @@ def homepage():
     - logged in: 100 most recent messages of followed_users
     """
 
+    print "log: app.py - homepage()"
     return render_template('home.html')
 
