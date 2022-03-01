@@ -36,8 +36,8 @@ def create_app(test_config=None):
     app.config['TESTING'] = True
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
-    from models import connect_db
-    connect_db(app)
+#    from models import connect_db
+#    connect_db(app)
 
 #    from flask_debugtoolbar import DebugToolbarExtension
 #    debug = DebugToolbarExtension(app)
