@@ -1,8 +1,6 @@
 import os
 
-from flask import Flask, render_template, request, flash, redirect, session, g
-from flask_debugtoolbar import DebugToolbarExtension
-from sqlalchemy.exc import IntegrityError
+from flask import Flask, render_template
 
 # from forms import UserAddForm, LoginForm, MessageForm
 from models import db, connect_db #, User, Message
@@ -10,12 +8,6 @@ from models import db, connect_db #, User, Message
 CURR_USER_KEY = "curr_user"
 
 app = Flask(__name__)
-
-from config import config_app
-config_app(app)
-connect_db(app)
-
-toolbar = DebugToolbarExtension(app)
 
 
 ##############################################################################
