@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Food{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% for item in list %}
+    <article class="post">
+      <header>
+        <div>
+          <h1>{{ item['name'] }}</h1>
+        </div>
+      </header>
+      <p class="body">{{ item['description'] }}</p>
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

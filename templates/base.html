@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Community Cooking</title>
+<link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/popper"></script>
+<script src="https://unpkg.com/bootstrap"></script>
 
-  <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
-  <script src="https://unpkg.com/jquery"></script>
-  <script src="https://unpkg.com/popper"></script>
-  <script src="https://unpkg.com/bootstrap"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 
-<body>
-<div class="container">
 
-  {% block content %}
-  {% endblock %}
-
-</div>
-</body>
-
-</html>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
