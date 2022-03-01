@@ -6,12 +6,15 @@ from dotenv import dotenv_values
 def config_app(app):
     print("log: config.py - config_app() : begin")
 
+    DATABASE_URI = ''
+    SECRET_KEY = ''
+
     if 'ON_HEROKU' in os.environ:
-        DATABASE_URI = os.environ.get('DATABASE_URI')
         SECRET_KEY = os.environ.get('SECRET_KEY')
+        DATABASE_URI = os.environ.get('DATABASE_URI')
     else:
         settings = dotenv_values("/Users/yu/sb/conf/.env")
-        SECRET_KEY = settings['SECRET_KEY']
+        SECRET_KEY = settings['SECRET']
 
         DB_CONFIG = {
             'driver': settings['PGDRIVER'],
