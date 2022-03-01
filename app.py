@@ -1,22 +1,29 @@
 def create_app(test_config=None):
 
-    from dotenv import dotenv_values
-    settings = dotenv_values("/Users/yu/sb/conf/.env")
+    import os
 
-    DB_CONFIG = {
-        'driver': settings['PGDRIVER'],
-        'user': settings['PGUSER'],
-        'pw': settings['PGPASSWORD'],
-        'db': 'cooking',
-        'host': settings['PGHOST'],
-        'port': settings['PGPORT'],
-    }
+    if 'ON_HEROKU' in os.environ:
+        db_url = os.environ.get('DATABASE_URL')
+    else:
+        from dotenv import dotenv_values
+        settings = dotenv_values("/Users/yu/sb/conf/.env")
+
+        DB_CONFIG = {
+            'driver': settings['PGDRIVER'],
+            'user': settings['PGUSER'],
+            'pw': settings['PGPASSWORD'],
+            'db': 'warbler',
+            'host': settings['PGHOST'],
+            'port': settings['PGPORT'],
+        }
+
+        db_url = '{driver}://{user}:{pw}@{host}:{port}/{db}'.format_map(DB_CONFIG)
 
     # create and configure the app
     from flask import Flask, redirect
     app = Flask(__name__, instance_relative_config=True)
 
-    app.config.from_mapping(
+    app.config.from_mapping (
         SECRET_KEY=settings['SECRET'],
         SQLALCHEMY_DATABASE_URI='{driver}://{user}:{pw}@{host}:{port}/{db}'.format_map(DB_CONFIG),
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
