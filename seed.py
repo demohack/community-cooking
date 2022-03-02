@@ -1,4 +1,3 @@
-"""Seed database with sample data from CSV Files."""
 print("log: seed.py : begin")
 
 from flask import Flask
