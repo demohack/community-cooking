@@ -1,0 +1,44 @@
+{
+    "query": "{{base_url_recipes}}/complexSearch?query=burrito&apiKey={{api_key}}",
+    "results": [
+        {
+            "id": 1096057,
+            "title": "Cheesy Beef Burrito",
+            "image": "https://spoonacular.com/recipeImages/1096057-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 1096058,
+            "title": "Sausage and Egg Breakfast Burrito",
+            "image": "https://spoonacular.com/recipeImages/1096058-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 637999,
+            "title": "Chicken Burritos",
+            "image": "https://spoonacular.com/recipeImages/637999-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 637133,
+            "title": "Carne Asada Burritos",
+            "image": "https://spoonacular.com/recipeImages/637133-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 637890,
+            "title": "Chicken and Black Bean Burritos",
+            "image": "https://spoonacular.com/recipeImages/637890-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 640851,
+            "title": "Crock Pot Beef and Bean Burritos",
+            "image": "https://spoonacular.com/recipeImages/640851-312x231.jpg",
+            "imageType": "jpg"
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 6
+}

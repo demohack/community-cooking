@@ -1,11 +1,7 @@
-print("log: config.py : begin")
-
 import os
 from dotenv import dotenv_values
 
 def config_app(app):
-    print("log: config.py - config_app() : begin")
-
     DATABASE_URI = ''
     SECRET_KEY = ''
 
@@ -33,7 +29,3 @@ def config_app(app):
     app.config['SECRET_KEY'] = SECRET_KEY
     app.config['TESTING'] = True
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
-
-    print("log: config.py - config_app() : end")
-
-print("log: config.py : end")

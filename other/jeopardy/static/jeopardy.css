@@ -1,0 +1,55 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+table {
+  table-layout: fixed;
+  width: 900px;
+  height: 550px;
+  border-collapse: collapse;
+  border: 0px solid purple;
+}
+
+thead th {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2 em;
+  height: 50px;
+  width: 150px;
+  padding: 5px;
+}
+
+.table td {
+  text-align: center;
+  font-size: 1 em;
+  height: 100px;
+  width: 150px;
+  padding: 5px;
+}
+
+.cover {
+  text-align: center;
+  font-size: 1 em;
+}
+
+.question {
+  text-align: center;
+  font-size: 1 em;
+}
+
+.answer {
+  text-align: center;
+  font-size: 1 em;
+}
+
+.hide {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}

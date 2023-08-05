@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}401 Unauthorized{% endblock %}
+
+{% block csslinks %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+The server could not verify that you are authorized to access the URL requested. 
+Your browser will be redirected to the login page in <span id="redirect_time">5</span> seconds.
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block scriptlinks %}
+<script>
+    var seconds = 3;
+    $("#redirect_time").text(seconds);
+    window.setInterval(function(){
+        if (seconds == 0)
+            window.location.href = "/login";
+        $("#redirect_time").text(seconds);
+        seconds -= 1;
+    }, 1000)
+    
+</script>
+{% endblock %}

@@ -1,0 +1,74 @@
+{
+    "query": "",
+    "results": [
+        {
+            "id": 324694,
+            "title": "Silver Dollar Buttermilk-Pecan Pancakes with Bourbon Molasses Butter and Maple Syrup",
+            "image": "https://spoonacular.com/recipeImages/324694-556x370.jpeg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 633830,
+            "title": "Baked Swedish Pancake",
+            "image": "https://spoonacular.com/recipeImages/633830-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 633428,
+            "title": "Baked Apple Pancake",
+            "image": "https://spoonacular.com/recipeImages/633428-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 635001,
+            "title": "Birthday Pancakes",
+            "image": "https://spoonacular.com/recipeImages/635001-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 653472,
+            "title": "Oatmeal Pancake (Yummy & Heart Healthy)",
+            "image": "https://spoonacular.com/recipeImages/653472-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 654485,
+            "title": "Pancake Bites",
+            "image": "https://spoonacular.com/recipeImages/654485-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 654487,
+            "title": "Pancake Cupcakes With Maple Frosting and Candied Bacon",
+            "image": "https://spoonacular.com/recipeImages/654487-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 654495,
+            "title": "Pancakes",
+            "image": "https://spoonacular.com/recipeImages/654495-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 662582,
+            "title": "Sweet Potato Green Tea Pancake Roll",
+            "image": "https://spoonacular.com/recipeImages/662582-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 716269,
+            "title": "Peach Carrot Coconut Vegan Pancake",
+            "image": "https://spoonacular.com/recipeImages/716269-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 756817,
+            "title": "Matcha Pancakes",
+            "image": "https://spoonacular.com/recipeImages/756817-312x231.jpg",
+            "imageType": "jpg"
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 64
+}

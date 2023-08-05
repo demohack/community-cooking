@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block title %}Community Cooking - Cards{% endblock %}
+
+{% block csslinks %}
+<link href="{{ url_for('connect4.static', filename='connect4.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+{% raw %}
+{% endraw %}
+{% endblock %}
+
+{% block content %}
+<div id="dashboard">
+    <input type="button" value="restart" id="restartButton">
+    <div id="scoreboard">
+        <span id="blueScore">blue: 0</span>
+        <span id="redScore">red: 0</span>
+    </div>
+    <div id="result">
+    </div>
+</div>
+
+<div id="game">
+    <table id="board"></table>
+</div>
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('connect4.static', filename='connect4.js') }}"></script>
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script>
+  loadUserSession()
+</script>
+{% endblock %}

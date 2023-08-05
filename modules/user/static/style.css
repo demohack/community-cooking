@@ -1,0 +1,152 @@
+html {
+  font-family: Arimo, sans-serif;
+}
+
+body {
+  margin: 8px 7.5vw;
+}
+
+h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.star,
+.trash-can,
+.pencil {
+  font-size: 0.75rem;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.trash-can:hover {
+  color: crimson;
+}
+
+.pencil:hover {
+  color: darkblue;
+}
+
+.article-link>strong {
+  color: black;
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin: 18px 0;
+}
+
+.article-link:hover {
+  text-decoration: none;
+}
+
+.article-hostname:hover {
+  text-decoration: underline;
+}
+
+.article-author {
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+.article-username {
+  display: block;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+#favorited-articles,
+#filtered-articles,
+#my-articles {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.button-star-checked {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/static/images/star2-24x24.png");
+  border: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.button-star {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/static/images/star1-24x24.png");
+  border: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.button-trash-false {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/static/images/trash1-18x24.png");
+  border: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.button-trash-true {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/static/images/trash2-18x24.png");
+  border: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.button-edit-false {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/static/images/edit1-24x24.png");
+  border: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.button-edit-true {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/static/images/edit2-24x24.png");
+  border: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

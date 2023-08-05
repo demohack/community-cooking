@@ -1,0 +1,23 @@
+
+.is-invalid {
+    border-color: coral;
+}
+
+.is-valid {
+    border-color: black;
+}
+
+form p label {
+    background-color: yellow;
+    width: 10em;
+}
+
+form button {   /* gets overriden by .btn due to precedence */
+    border-width: 1px;
+    border-color: black;
+}
+
+.btn {
+    border-width: 1px;
+    border-color: black;
+}
