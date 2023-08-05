@@ -1,0 +1,26 @@
+{
+    "query": "{{base_url_recipes}}/complexSearch?query=pho&apiKey={{api_key}}",
+    "results": [
+        {
+            "id": 1096250,
+            "title": "Pho With Zucchini Noodles",
+            "image": "https://spoonacular.com/recipeImages/1096250-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 1096211,
+            "title": "The Easiest Beef Pho",
+            "image": "https://spoonacular.com/recipeImages/1096211-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 1095994,
+            "title": "Crock Pot Chicken Pho",
+            "image": "https://spoonacular.com/recipeImages/1095994-312x231.jpg",
+            "imageType": "jpg"
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 3
+}

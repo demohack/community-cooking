@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block csslinks %}
+<link rel="stylesheet" href="{{ url_for('user.static', filename='style.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1>{{ py_data.other.username }}'s home page</h1>
+{% endblock %}
+
+{% block content %}
+{% raw %}
+<div id="app">
+    <section class="articles-container container">
+        <article>
+            <ol id="all-articles-list" class="articles-list">
+                <h3>Loading...</h3>
+            </ol>
+        </article>
+    </section>
+</div>
+{% endraw %}
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script src="{{ url_for('user.static', filename='data.js') }}"></script>
+<script src="{{ url_for('user.static', filename='ui.js') }}"></script>
+<script>
+</script>
+{% endblock %}
+
+<!-- <div id="messages"></div>
+hello {{ py_data.user.username }} you are visiting {{ py_data.other.username }}'s home page
+<a class="nav-link" href="/user/{{ py_data.user.username }}/edit">Edit Profile</a>
+<a class="nav-link" href="/user/{{ py_data.user.username }}/disable">Disable Profile</a>
+<a class="nav-link" href="/user/{{ py_data.user.username }}/delete">Delete Profile</a>
+show messages and reacts for other -->

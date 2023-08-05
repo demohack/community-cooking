@@ -1,0 +1,560 @@
+{
+    "query": "{{base_url_recipes}}/324694/information?apiKey={{api_key}}&includeNutrition=true",
+    "vegetarian": true,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 33,
+    "gaps": "no",
+    "lowFodmap": false,
+    "preparationMinutes": 20,
+    "cookingMinutes": 35,
+    "aggregateLikes": 0,
+    "spoonacularScore": 30.0,
+    "healthScore": 5.0,
+    "creditsText": "Foodnetwork",
+    "sourceName": "Foodnetwork",
+    "pricePerServing": 277.09,
+    "extendedIngredients": [
+        {
+            "id": 18371,
+            "aisle": "Baking",
+            "image": "white-powder.jpg",
+            "consistency": "solid",
+            "name": "baking powder",
+            "nameClean": "low sodium baking powder",
+            "original": "1 teaspoon baking powder",
+            "originalName": "baking powder",
+            "amount": 1.0,
+            "unit": "teaspoon",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                }
+            }
+        },
+        {
+            "id": 18372,
+            "aisle": "Baking",
+            "image": "white-powder.jpg",
+            "consistency": "solid",
+            "name": "baking soda",
+            "nameClean": "baking soda",
+            "original": "1/2 teaspoon baking soda",
+            "originalName": "baking soda",
+            "amount": 0.5,
+            "unit": "teaspoon",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 0.5,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 10014037,
+            "aisle": "Alcoholic Beverages",
+            "image": "bourbon.png",
+            "consistency": "liquid",
+            "name": "bourbon",
+            "nameClean": "bourbon",
+            "original": "1/2 cup good quality bourbon, or more to taste",
+            "originalName": "good quality bourbon, or more to taste",
+            "amount": 0.5,
+            "unit": "cup",
+            "meta": [
+                "to taste"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 118.294,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1230,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "buttermilk.jpg",
+            "consistency": "solid",
+            "name": "buttermilk",
+            "nameClean": "buttermilk",
+            "original": "1 1/2 cups, plus 3 tablespoons buttermilk",
+            "originalName": "plus 3 tablespoons buttermilk",
+            "amount": 1.5,
+            "unit": "cups",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 354.882,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 19336,
+            "aisle": "Baking",
+            "image": "powdered-sugar.jpg",
+            "consistency": "solid",
+            "name": "confectioners' sugar",
+            "nameClean": "powdered sugar",
+            "original": "Confectioners' sugar, for garnish",
+            "originalName": "Confectioners' sugar, for garnish",
+            "amount": 6.0,
+            "unit": "servings",
+            "meta": [
+                "for garnish"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 1123,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "egg.png",
+            "consistency": "solid",
+            "name": "eggs",
+            "nameClean": "egg",
+            "original": "2 large eggs",
+            "originalName": "eggs",
+            "amount": 2.0,
+            "unit": "large",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 2.0,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                },
+                "metric": {
+                    "amount": 2.0,
+                    "unitShort": "large",
+                    "unitLong": "larges"
+                }
+            }
+        },
+        {
+            "id": 20081,
+            "aisle": "Baking",
+            "image": "flour.png",
+            "consistency": "solid",
+            "name": "flour",
+            "nameClean": "wheat flour",
+            "original": "1 1/2 cups all-purpose flour",
+            "originalName": "all-purpose flour",
+            "amount": 1.5,
+            "unit": "cups",
+            "meta": [
+                "all-purpose"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 354.882,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 19335,
+            "aisle": "Baking",
+            "image": "sugar-in-bowl.png",
+            "consistency": "solid",
+            "name": "granulated sugar",
+            "nameClean": "sugar",
+            "original": "2 tablespoons granulated sugar",
+            "originalName": "granulated sugar",
+            "amount": 2.0,
+            "unit": "tablespoons",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 2.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                },
+                "metric": {
+                    "amount": 2.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                }
+            }
+        },
+        {
+            "id": 1082047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt.jpg",
+            "consistency": "solid",
+            "name": "kosher salt",
+            "nameClean": "kosher salt",
+            "original": "Kosher salt, to taste",
+            "originalName": "Kosher salt, to taste",
+            "amount": 6.0,
+            "unit": "servings",
+            "meta": [
+                "to taste"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 19334,
+            "aisle": "Baking",
+            "image": "light-brown-sugar.jpg",
+            "consistency": "solid",
+            "name": "light brown sugar",
+            "nameClean": "golden brown sugar",
+            "original": "1 tablespoon light brown sugar",
+            "originalName": "light brown sugar",
+            "amount": 1.0,
+            "unit": "tablespoon",
+            "meta": [
+                "light"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "Tbsp",
+                    "unitLong": "Tbsp"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "Tbsp",
+                    "unitLong": "Tbsp"
+                }
+            }
+        },
+        {
+            "id": 19911,
+            "aisle": "Cereal",
+            "image": "maple-syrup.png",
+            "consistency": "liquid",
+            "name": "maple syrup",
+            "nameClean": "maple syrup",
+            "original": "Pure maple syrup, warmed",
+            "originalName": "Pure maple syrup, warmed",
+            "amount": 6.0,
+            "unit": "servings",
+            "meta": [
+                "warmed",
+                "pure"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 19304,
+            "aisle": "Baking",
+            "image": "molasses.jpg",
+            "consistency": "solid",
+            "name": "molasses",
+            "nameClean": "molasses",
+            "original": "3 tablespoons molasses",
+            "originalName": "molasses",
+            "amount": 3.0,
+            "unit": "tablespoons",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 3.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                },
+                "metric": {
+                    "amount": 3.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                }
+            }
+        },
+        {
+            "id": 12142,
+            "aisle": "Nuts;Baking",
+            "image": "pecans.jpg",
+            "consistency": "solid",
+            "name": "pecans",
+            "nameClean": "pecans",
+            "original": "1/2 cup finely chopped toasted pecans",
+            "originalName": "finely chopped toasted pecans",
+            "amount": 0.5,
+            "unit": "cup",
+            "meta": [
+                "toasted",
+                "finely chopped"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 118.294,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 12142,
+            "aisle": "Nuts;Baking",
+            "image": "pecans.jpg",
+            "consistency": "solid",
+            "name": "pecans",
+            "nameClean": "pecans",
+            "original": "Coarsely chopped toasted pecans, for garnish, optional",
+            "originalName": "Coarsely chopped toasted pecans, for garnish, optional",
+            "amount": 6.0,
+            "unit": "servings",
+            "meta": [
+                "toasted",
+                "coarsely chopped",
+                "for garnish, optional"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                },
+                "metric": {
+                    "amount": 6.0,
+                    "unitShort": "servings",
+                    "unitLong": "servings"
+                }
+            }
+        },
+        {
+            "id": 1012047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt.jpg",
+            "consistency": "solid",
+            "name": "sea salt",
+            "nameClean": "coarse sea salt",
+            "original": "3/4 teaspoon fine sea salt",
+            "originalName": "fine sea salt",
+            "amount": 0.75,
+            "unit": "teaspoon",
+            "meta": [
+                "fine"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.75,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                },
+                "metric": {
+                    "amount": 0.75,
+                    "unitShort": "tsps",
+                    "unitLong": "teaspoons"
+                }
+            }
+        },
+        {
+            "id": 19335,
+            "aisle": "Baking",
+            "image": "sugar-in-bowl.png",
+            "consistency": "solid",
+            "name": "sugar",
+            "nameClean": "sugar",
+            "original": "1 tablespoon sugar",
+            "originalName": "sugar",
+            "amount": 1.0,
+            "unit": "tablespoon",
+            "meta": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "Tbsp",
+                    "unitLong": "Tbsp"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "Tbsp",
+                    "unitLong": "Tbsp"
+                }
+            }
+        },
+        {
+            "id": 1145,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "butter-sliced.jpg",
+            "consistency": "solid",
+            "name": "unsalted butter",
+            "nameClean": "unsalted butter",
+            "original": "1 cup (2 sticks) unsalted butter, slightly softened",
+            "originalName": "(2 sticks) unsalted butter, slightly softened",
+            "amount": 1.0,
+            "unit": "cup",
+            "meta": [
+                "unsalted",
+                "softened",
+                "(2 sticks)"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "cup",
+                    "unitLong": "cup"
+                },
+                "metric": {
+                    "amount": 236.588,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 1145,
+            "aisle": "Milk, Eggs, Other Dairy",
+            "image": "butter-sliced.jpg",
+            "consistency": "solid",
+            "name": "unsalted butter",
+            "nameClean": "unsalted butter",
+            "original": "3 tablespoons unsalted butter, melted and cooled, plus more for griddle",
+            "originalName": "unsalted butter, melted and cooled, plus more for griddle",
+            "amount": 3.0,
+            "unit": "tablespoons",
+            "meta": [
+                "unsalted",
+                "cooled",
+                "melted",
+                "plus more for griddle"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 3.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                },
+                "metric": {
+                    "amount": 3.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                }
+            }
+        },
+        {
+            "id": 93622,
+            "aisle": "Baking",
+            "image": "vanilla.jpg",
+            "consistency": "solid",
+            "name": "vanilla bean",
+            "nameClean": "vanilla bean",
+            "original": "1/2 vanilla bean, split lengthwise and seeds scraped",
+            "originalName": "vanilla bean, split lengthwise and seeds scraped",
+            "amount": 0.5,
+            "unit": "",
+            "meta": [
+                "split"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 0.5,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 0.5,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 2050,
+            "aisle": "Baking",
+            "image": "vanilla-extract.jpg",
+            "consistency": "liquid",
+            "name": "vanilla extract",
+            "nameClean": "vanilla extract",
+            "original": "1 teaspoon pure vanilla extract",
+            "originalName": "pure vanilla extract",
+            "amount": 1.0,
+            "unit": "teaspoon",
+            "meta": [
+                "pure"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                }
+            }
+        }
+    ],
+    "originalId": null
+}

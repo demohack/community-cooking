@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block csslinks %}
+<link rel="stylesheet" href="{{ url_for('stories.static', filename='style.css') }}">
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+{% raw %}
+<div id="app"></div>
+{% endraw %}
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('stories.static', filename='api_story_list.js') }}"></script>
+<script src="{{ url_for('stories.static', filename='ui.js') }}"></script>
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script>
+  loadUserSession()
+</script>
+{% endblock %}

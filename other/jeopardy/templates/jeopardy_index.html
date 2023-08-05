@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block title %}Community Cooking - Jeopardy!{% endblock %}
+
+{% block csslinks %}
+<link href="https://fonts.googleapis.com/css?family=Copse&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('jeopardy.static', filename='jeopardy.css') }}">
+{% endblock %}
+
+{% block header %}
+{% raw %}
+{% endraw %}
+{% endblock %}
+
+{% block content %}
+<div id="jeopardy">      
+</div>
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('jeopardy.static', filename='jeopardy.js') }}"></script>
+<script src="{{ url_for('jeopardy.static', filename='sampledata.js') }}"></script>
+<script src="{{ url_for('jeopardy.static', filename='apphtml.js') }}"></script>
+<script src="{{ url_for('static', filename='/base.js') }}"></script>
+<script>
+  loadUserSession()
+
+  // This is the true start up of the whole shebang.
+  $(document).ready(function () {
+      let $body = $("#jeopardy");
+      console.log("#### appjs document.ready called ####");
+
+      // I really don't like building out HTML code, it's slow and cumbersome.
+      // Also wanted to play with dynamically loading HTML from other files, but didn't quite get further into it.
+      // Was running into problem from Live Server not wanting to serve up html files without full html head code.
+      let parsedHTML = $.parseHTML($html);
+
+      // Append the parsed HTML
+      $body.append(parsedHTML);
+
+      // Get the show going!
+      setupAndStart();
+  });
+</script>
+{% endblock %}

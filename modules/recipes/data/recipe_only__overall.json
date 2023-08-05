@@ -1,0 +1,36 @@
+{
+    "query": "{{base_url_recipes}}/324694/information?apiKey={{api_key}}&includeNutrition=true",
+    "vegetarian": true,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": false,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 33,
+    "gaps": "no",
+    "lowFodmap": false,
+    "preparationMinutes": 20,
+    "cookingMinutes": 35,
+    "aggregateLikes": 0,
+    "spoonacularScore": 30.0,
+    "healthScore": 5.0,
+    "creditsText": "Foodnetwork",
+    "sourceName": "Foodnetwork",
+    "pricePerServing": 277.09,
+    "nutrition": {
+        "nutrients": [],
+        "ingredients": [],
+        "caloricBreakdown": {
+            "percentProtein": 4.72,
+            "percentFat": 58.79,
+            "percentCarbs": 36.49
+        },
+        "weightPerServing": {
+            "amount": 231,
+            "unit": "g"
+        }
+    },
+    "originalId": null
+}

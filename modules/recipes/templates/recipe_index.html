@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% block header %}{% endblock %}
+{% block content %}
+<section class="articles-container container">
+  <form action="" class="hidden" id="submit-form">
+    <h4>Submit New Story</h4>
+    <div>
+      <label for="author">author</label>
+      <input id="author" required type="text" placeholder="author name">
+    </div>
+    <div>
+      <label for="title">title</label>
+      <input id="title" required type="text" placeholder="article title">
+    </div>
+    <div>
+      <label for="url">url</label>
+      <input id="url" required type="url" placeholder="article url">
+    </div>
+    <button type="submit">submit</button>
+    <hr>
+  </form>
+  <form action="" class="hidden" id="edit-article-form">
+    <h4>Edit Submitted Story</h4>
+    <div class="edit-input">
+      <div>
+        <label for="edit-author">author</label>
+        <input id="edit-author" type="text">
+      </div>
+      <div>
+        <label for="edit-title">title</label>
+        <input id="edit-title" type="text">
+      </div>
+      <div>
+        <label for="edit-url">url</label>
+        <input id="edit-url" type="url">
+      </div>
+      <div hidden>
+        <label for="edit-storyid">story id</label>
+        <input id="edit-storyid" type="text">
+      </div>
+      <button type="submit">change</button>
+    </div>
+  </form>
+  <article>
+    <ol id="all-articles-list" class="articles-list">
+      <h3>Loading...</h3>
+    </ol>
+  </article>
+</section>
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('recipes.static', filename='api-classes.js') }}"></script>
+<script src="{{ url_for('recipes.static', filename='ui.js') }}"></script>
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script>
+  loadUserSession()
+</script>
+{% endblock %}

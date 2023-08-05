@@ -1,78 +1,73 @@
+#
+# create_app is the main entry point for this flask web app
+#
+
+#import ipdb; ipdb.set_trace()
+
 def create_app(test_config=None):
+    from flask import Flask
+    app = Flask(__name__, static_url_path='/static')
 
-    DATABASE_URI = ''
-    SECRET_KEY = ''
+    from config import config_app
+    config_app(app)
 
-    import os
+    from data.models import connect_db
+    connect_db(app)
 
-    if 'ON_HEROKU' in os.environ:
-        DATABASE_URI = os.environ.get('DATABASE_URL2')
-        SECRET_KEY = os.environ.get('SECRET_KEY')
+    @app.after_request
+    def add_header(req):
+        # Turn off all caching in Flask
+        # https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
 
-    else:
-        from dotenv import dotenv_values
-        settings = dotenv_values("/Users/yu/sb/conf/.env")
-        SECRET_KEY = settings['SECRET'];
+        req.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        req.headers["Pragma"] = "no-cache"
+        req.headers["Expires"] = "0"
+        req.headers['Cache-Control'] = 'public, max-age=0'
+        return req
 
-        DB_CONFIG = {
-            'driver': settings['PGDRIVER'],
-            'user': settings['PGUSER'],
-            'pw': settings['PGPASSWORD'],
-            'db': 'warbler',
-            'host': settings['PGHOST'],
-            'port': settings['PGPORT'],
-        }
+    from modules.admin import admin
+    app.register_blueprint(admin.bp)
 
-        DATABASE_URI = '{driver}://{user}:{pw}@{host}:{port}/{db}'.format_map(DB_CONFIG)
+    from modules.events import events
+    app.register_blueprint(events.bp)
 
-    # create and configure the app
-    from flask import Flask, redirect
-    app = Flask(__name__, instance_relative_config=True)
+    from modules.friends import friends
+    app.register_blueprint(friends.bp)
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_ECHO'] = False
-    app.config['SECRET_KEY'] = SECRET_KEY
-    app.config['TESTING'] = True
-    app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+    from modules.auth import auth
+    app.register_blueprint(auth.bp)
 
-#    from models import connect_db
-#    connect_db(app)
+    from modules.stories import stories
+    app.register_blueprint(stories.bp)
 
-#    from flask_debugtoolbar import DebugToolbarExtension
-#    debug = DebugToolbarExtension(app)
+    from modules.recipes import recipes
+    app.register_blueprint(recipes.bp)
 
-#    import ipdb; ipdb.set_trace()
+    from modules.search import search
+    app.register_blueprint(search.bp)
 
-    @app.route('/')
-    def show_index():
-        """Homepage: redirect to whatever you want."""
-        return redirect("/login")       # /blog, /login, /hello
+    from modules.users import users
+    app.register_blueprint(users.bp)
 
-    from modules.auth import bp as auth_bp
-    app.register_blueprint(auth_bp)
+    from modules.user import user
+    app.register_blueprint(user.bp)
 
-    # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    from modules.visitor import visitor
+    app.register_blueprint(visitor.bp)
+
+    from other.todos import todos
+    app.register_blueprint(todos.bp)
+
+    from other.jeopardy import jeopardy
+    app.register_blueprint(jeopardy.bp)
+
+    from other.hack_or_snooze import hack_or_snooze
+    app.register_blueprint(hack_or_snooze.bp)
+
+    from other.connect4 import connect4
+    app.register_blueprint(connect4.bp)
+
+    from other.cards import cards
+    app.register_blueprint(cards.bp)
 
     return app
-
-"""
-    from modules.blog import bp as blog_bp
-    app.register_blueprint(blog_bp)
-
-    from modules.events import bp as events_bp
-    app.register_blueprint(events_bp)
-
-    from modules.recipes import bp as recipes_bp
-    app.register_blueprint(recipes_bp)
-
-    from modules.food import bp as food_bp
-    app.register_blueprint(food_bp)
-
-    from modules.users import bp as users_bp
-    app.register_blueprint(users_bp)
-"""
-

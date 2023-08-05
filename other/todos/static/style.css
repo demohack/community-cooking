@@ -1,0 +1,19 @@
+#controlboard {
+    width: 400px;
+    height: 60px;
+    background-color: yellow;
+}
+
+#todoContent {
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}
+
+#modelItem {
+    visibility: hidden;
+}
+
+.done {
+    text-decoration: line-through;
+}

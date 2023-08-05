@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block content %}
+  {% if py_data.users|length == 0 %}
+    <h3>Sorry, no users found</h3>
+  {% else %}
+    <div class="row justify-content-start">
+      <div class="col-sm-9">
+        <div class="row">
+
+          {% for user in py_data.users %}
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="card user-card">
+                <div class="card-inner">
+                  <div class="card-contents">
+                    <a href="/user/{{ py_data.user.username }}" class="card-link">
+                      <img src="{{ py_data.user.image_url }}" alt="Image for {{ py_data.user.username }}" class="card-image">
+                      <p>@{{ py_data.user.username }}</p>
+                    </a>
+
+                  </div>
+                  <p class="card-bio">{{ py_data.user.about }}</p>
+                </div>
+              </div>
+            </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

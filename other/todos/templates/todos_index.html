@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block title %}Community Cooking - TODOs{% endblock %}
+
+{% block csslinks %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('todos.static', filename='style.css') }}">
+{% endblock %}
+
+{% block header %}
+{% raw %}
+{% endraw %}
+{% endblock %}
+
+{% block content %}
+<div id="controlboard">
+    <form id="controlform">
+        <label for="newtask">task </label>
+        <input type="text" name="newtask" id="newtask" value="">
+        <br>
+        <input type="submit" id="addTask" value="Add Task">
+        <input type="submit" id="saveList" value="Save List">
+        <input type="submit" id="resetList" value="Reset List">
+    </form>
+</div>
+<div id="todoContent">
+    <ul id="todoList">
+        <li id="modelItem">
+            <input type="submit" value="+">
+            <input type="submit" value="-">
+            <input type="submit" value="x">
+            <a class="task"></a>
+            <a class="dueDate"></a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block scriptlinks %}
+<script type="text/javascript" src="{{ url_for('todos.static', filename='todo-item.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('todos.static', filename='todo-list.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('todos.static', filename='todo-ui.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('todos.static', filename='app.js') }}"></script>
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script>
+  loadUserSession()
+</script>
+{% endblock %}

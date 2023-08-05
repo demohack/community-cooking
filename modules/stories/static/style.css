@@ -1,0 +1,42 @@
+html {
+  font-family: Arimo, sans-serif;
+}
+
+body {
+  margin: 8px 7.5vw;
+}
+
+h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* VUE
+*/
+.done {
+  text-decoration: line-through;
+}

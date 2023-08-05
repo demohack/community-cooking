@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block title %}Community Cooking{% endblock %}
+
+{% block csslinks %}
+{% endblock %}
+
+{% block navbar %}
+{% raw %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/" id="site-name">Community Cooking</a>
+  <!-- inline form inside the navbar -->
+  <form class="form-inline my-2 my-lg-0 w-75">
+    <input class="form-control mr-sm-2 w-75" type="search" placeholder="Search" aria-label="Search" id="search-input">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-submit">Search</button>
+  </form>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- div containing the toggable navigation -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- navigation menu -->
+    <ul class="navbar-nav mr-auto w-25">
+        <!-- active link corresponding to the current page -->
+        <li class="nav-item">
+            <a class="nav-link" href="/login" id="menu-login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup" id="menu-signup">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled auth" href="/events" id="menu-events">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled auth" href="/friends" id="menu-friends">Friends</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled auth" href="/recipes" id="menu-recipes">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled auth" href="/stories" id="menu-stories">Stories</a>
+        </li>
+      </ul>
+  </div>        
+</nav>
+{% endraw %}
+{% endblock %}
+
+{% block header %}
+{% raw %}
+<div class="row">
+  <header class="col jumbotron jumbotron-fluid">
+      <div class="container-fluid">
+          <h1 class="display-4 text-dark">
+              Pasta Party at Brendan's House
+          </h1>
+          <p class="lead text-dark">Sed placerat fringilla quam et.</p>
+          <button type="button" class="btn btn-primary btn-lg">See Details</button>
+      </div>
+  </header>
+</div>
+{% endraw %}
+{% endblock %}
+
+{% block content %}
+{% raw %}
+<div class="row">
+
+  <!-- first column -->
+  <div class="col-sm pb-4">
+
+    <!-- column content here -->
+    <a href="#">
+      <img class="img-fluid mx-auto d-block mt-4 mb-2 rounded-circle" src="path/to/img" alt="">
+    </a>
+    <h3 class="text-left mb-2">Salad Roll Recipe 1</h3>
+    <p>
+      Lorem Ipsum...
+    </p>
+    <button class="btn btn-success">More Info</button>
+
+  </div>
+
+  <!-- second column -->
+  <div class="col-sm pb-4">
+
+        <!-- column content here -->
+        <a href="#">
+          <img class="img-fluid mx-auto d-block mt-4 mb-2 rounded-circle" src="path/to/img" alt="">
+        </a>
+        <h3 class="text-left mb-2">Pasta Recipe 2</h3>
+        <p>
+          Lorem Ipsum...
+        </p>
+        <button class="btn btn-success">More Info</button>
+    
+  </div>
+
+  <!-- third column -->
+  <div class="col-sm pb-4">
+
+        <!-- column content here -->
+        <a href="#">
+          <img class="img-fluid mx-auto d-block mt-4 mb-2 rounded-circle" src="path/to/img" alt="">
+        </a>
+        <h3 class="text-left mb-2">Pancake Recipe 3</h3>
+        <p>
+          Lorem Ipsum...
+        </p>
+        <button class="btn btn-success">More Info</button>
+    
+  </div>
+
+</div>
+{% endraw %}
+{% endblock %}
+
+{% block footer %}
+{% raw %}
+<footer class="row pt-4">
+
+  <!-- first column -->
+  <div class="col-sm">
+    <small><p>© 2022 Yu Te</p></small>
+  </div>
+
+  <!-- second column -->
+  <div class="col-sm">
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <small><a href="#">About Me</a></small>
+      </li>
+      <li class="list-inline-item">
+        <small><a href="#">Terms and Conditions</a></small>
+      </li>
+      <li class="list-inline-item">
+        <small><a href="#">Privacy Policy</a></small>
+      </li>
+    </ul>
+  </div>
+
+  <!-- third column -->
+  <div class="col-sm">
+    <small><p>Distributed as Open Source.</p></small>
+  </div>
+</footer>
+{% endraw %}
+{% endblock %}
+
+{% block data %}
+<div class=".d-none invisible" id="encoded-data">
+{% if js_data %}
+    {{ js_data | safe }}
+{% endif %}
+</div>
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script>
+  loadUserSession()
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block title %}Community Cooking - Cards{% endblock %}
+
+{% block csslinks %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('cards.static', filename='css-animation.css') }}">
+{% endblock %}
+
+{% block header %}
+{% raw %}
+{% endraw %}
+{% endblock %}
+
+{% block content %}
+<div id="stage">
+  <!-- -->
+</div>
+{% endblock %}
+
+{% block scriptlinks %}
+<script src="{{ url_for('cards.static', filename='css-animation2.js') }}"></script>
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+<script>
+  loadUserSession()
+  var game = new CardGame("stage");
+</script>
+{% endblock %}
